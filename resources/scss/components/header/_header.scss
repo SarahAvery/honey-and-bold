@@ -1,0 +1,20 @@
+.site-header {
+  .site-branding {
+    text-align: center;
+    font-family: "Tangerine", cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #111;
+  }
+  .site-title {
+    font-weight: bolder;
+    font-size: 60px;
+    margin: 50px 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #111;
+  }
+}

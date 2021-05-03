@@ -1,0 +1,56 @@
+.packages {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px 2%;
+
+  h1 {
+    font-weight: normal;
+    font-size: 30px;
+    font-style: italic;
+  }
+
+  ul.container {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    // text-align: center;
+  }
+  li {
+    border: 4px solid rgba(250, 236, 226, 1);
+    max-width: 550px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  h2 {
+    font-weight: normal;
+    font-size: 22px;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+  p {
+    padding: 5px 10px;
+    font-style: normal;
+  }
+
+  .filled-heart,
+  .outlined-heart {
+    fill: rosybrown;
+  }
+
+  svg {
+    width: 10px;
+  }
+
+  .custom {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    a {
+      text-decoration: underline;
+      color: #000;
+    }
+  }
+}

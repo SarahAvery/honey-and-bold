@@ -1,0 +1,89 @@
+.home-info {
+  height: auto;
+
+  .banner-container {
+    height: auto;
+    margin: 0 auto;
+    background-color: #fff;
+    // max-width: 1240px;
+
+    .feature {
+      margin-bottom: 80px;
+    }
+
+    .background-image-one {
+      background-image: url(../img/landscape/outdoor-2.jpg);
+      margin: 0 auto;
+      background-repeat: no-repeat;
+      background-position: left;
+      height: 500px;
+    }
+
+    .background-image-two {
+      background-image: url(../img/landscape/cohen-wedd.jpg);
+      margin: 0 auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 500px;
+      max-width: 1000px;
+    }
+
+    .info-one {
+      justify-content: flex-end;
+    }
+
+    .info-two {
+      justify-content: flex-start;
+      margin: 0 auto;
+    }
+
+    .container {
+      position: relative;
+      max-width: 1300px;
+      display: flex;
+      // margin-bottom: 60px;
+
+      .text-box-one {
+        max-width: 400px;
+        margin-top: -200px;
+        padding: 5px 40px;
+      }
+
+      .text-box-two {
+        max-width: 340px;
+        margin-top: -240px;
+        padding: 5px 40px;
+      }
+
+      .text-box {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 1);
+        height: auto;
+      }
+
+      p {
+        margin: 5px;
+      }
+
+      .title {
+        font-weight: bolder;
+        text-transform: capitalize;
+        font-size: 20px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+        font-weight: bold;
+        font-style: normal;
+        text-transform: capitalize;
+        padding-bottom: 5px;
+      }
+
+      .para {
+        padding-top: 10px;
+        border-top: 1px solid #111;
+      }
+    }
+  }
+}
