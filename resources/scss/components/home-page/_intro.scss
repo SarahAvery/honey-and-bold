@@ -1,11 +1,11 @@
 .intro {
-  padding: 40px 0;
+  padding: 50px 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 
   h2 {
-    padding-top: 1.5em;
+    // padding-top: 1.5em;
     width: 60%;
     text-align: center;
     border-bottom: 1px solid #000;
@@ -25,3 +25,20 @@
     text-align: center;
   }
 }
+
+// MEDIA QUERIES
+
+@media only screen and (max-width: 800px) {
+  .intro {
+    h2 {
+      width: 80%;
+    }
+    h2 span {
+      padding: 0 20px;
+    }
+    p {
+      width: 80%;
+      text-align: center;
+    }
+  }
+} ;

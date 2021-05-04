@@ -87,3 +87,93 @@
     }
   }
 }
+
+// MEDIA QUERIES
+
+@media only screen and (max-width: 950px) {
+  .home-info {
+    .banner-container {
+      .container {
+        .text-box-one {
+          max-width: 300px;
+          margin-top: -200px;
+          padding: 5px 20px;
+        }
+
+        .text-box-two {
+          max-width: 300px;
+          margin-top: -240px;
+          padding: 5px 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .home-info {
+    height: auto;
+
+    .banner-container {
+      .feature {
+        margin-bottom: 0px;
+      }
+
+      .container {
+        display: block;
+        margin: 20px auto;
+
+        .text-box {
+          padding: 5px 20px;
+          margin: 0 auto;
+          max-width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home-info {
+    .banner-container {
+      height: auto;
+
+      .background-image-one {
+        background-image: url(../img/landscape/outdoor-2-mobile.jpg);
+        background-position: center;
+        height: 500px;
+        width: 100%;
+        background-size: cover;
+      }
+
+      .background-image-two {
+        background-image: url(../img/landscape/cohen-wedd-mobile.jpg);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .home-info {
+    height: auto;
+
+    .banner-container {
+      .container {
+        .text-box {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .home-info {
+    .banner-container {
+      .background-image-two {
+        background-image: url(../img/landscape/cohen-wedd-mobile.jpg);
+        height: 400px;
+      }
+    }
+  }
+}
