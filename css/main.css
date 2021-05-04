@@ -1,10 +1,18 @@
 /* Genaric
 --------------------------------------------- */
-/* Header
---------------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+body {
+  height: 100%;
+  background-color: #fff;
+  font-family: "Lato", cursive;
+  font-style: italic;
+  line-height: 1.4;
+  color: #111; }
+
+/* Header
+--------------------------------------------- */
 .site-header .site-branding {
   text-align: center;
   font-family: "Tangerine", cursive;
@@ -110,12 +118,11 @@
 /* Home Page
 --------------------------------------------- */
 .intro {
-  padding: 40px 0;
+  padding: 50px 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap; }
   .intro h2 {
-    padding-top: 1.5em;
     width: 60%;
     text-align: center;
     border-bottom: 1px solid #000;
@@ -129,6 +136,15 @@
   .intro p {
     width: 60%;
     text-align: center; }
+
+@media only screen and (max-width: 800px) {
+  .intro h2 {
+    width: 80%; }
+  .intro h2 span {
+    padding: 0 20px; }
+  .intro p {
+    width: 80%;
+    text-align: center; } }
 
 .home-info {
   height: auto; }
@@ -189,6 +205,52 @@
         padding-top: 10px;
         border-top: 1px solid #111; }
 
+@media only screen and (max-width: 950px) {
+  .home-info .banner-container .container .text-box-one {
+    max-width: 300px;
+    margin-top: -200px;
+    padding: 5px 20px; }
+  .home-info .banner-container .container .text-box-two {
+    max-width: 300px;
+    margin-top: -240px;
+    padding: 5px 20px; } }
+
+@media only screen and (max-width: 800px) {
+  .home-info {
+    height: auto; }
+    .home-info .banner-container .feature {
+      margin-bottom: 0px; }
+    .home-info .banner-container .container {
+      display: block;
+      margin: 20px auto; }
+      .home-info .banner-container .container .text-box {
+        padding: 5px 20px;
+        margin: 0 auto;
+        max-width: 80%; } }
+
+@media only screen and (max-width: 600px) {
+  .home-info .banner-container {
+    height: auto; }
+    .home-info .banner-container .background-image-one {
+      background-image: url(../img/landscape/outdoor-2-mobile.jpg);
+      background-position: center;
+      height: 500px;
+      width: 100%;
+      background-size: cover; }
+    .home-info .banner-container .background-image-two {
+      background-image: url(../img/landscape/cohen-wedd-mobile.jpg); } }
+
+@media only screen and (max-width: 500px) {
+  .home-info {
+    height: auto; }
+    .home-info .banner-container .container .text-box {
+      max-width: 100%; } }
+
+@media only screen and (max-width: 400px) {
+  .home-info .banner-container .background-image-two {
+    background-image: url(../img/landscape/cohen-wedd-mobile.jpg);
+    height: 400px; } }
+
 /* Portfolio
 --------------------------------------------- */
 .gallery {
@@ -215,9 +277,61 @@
     max-height: 400px;
     padding-bottom: 10px; }
     .gallery .image-box img {
-      background-color: #9fbef8;
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      cursor: pointer; }
+  .gallery li.full-screen {
+    background: #faece2;
+    z-index: 10;
+    width: 100%;
+    max-height: 9999px;
+    height: 100vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .gallery li.full-screen img {
+      background: #fff;
+      padding: 20px;
+      height: 100%;
+      width: auto;
+      margin-top: 8px; }
+
+@media only screen and (max-width: 700px) {
+  .gallery li.full-screen {
+    background: #faece2;
+    z-index: 10;
+    width: 100%;
+    max-height: 9999px;
+    height: 100vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .gallery li.full-screen img {
+      background: #fff;
+      padding: 10px;
+      height: auto;
+      width: 100%;
+      margin-top: 8px;
+      margin-left: 5px; } }
+
+@media only screen and (max-width: 400px) {
+  .gallery .container {
+    justify-content: center; }
+  .gallery .container .image-box:nth-child(2n) {
+    padding-left: 0px; }
+  .gallery .container .image-box:nth-child(2n + 1) {
+    padding-right: 0px; }
+  .gallery .image-box {
+    width: 80%;
+    height: 200px; } }
 
 /* Portfolio
 --------------------------------------------- */
@@ -234,7 +348,8 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 100%; }
+    width: 100%;
+    padding-top: 20px; }
   .packages li {
     border: 4px solid #faece2;
     max-width: 550px;
@@ -246,16 +361,18 @@
     font-size: 22px;
     padding-bottom: 5px;
     text-align: center; }
-  .packages p {
-    padding: 5px 10px;
+  .packages .line {
+    display: flex;
+    padding: 5px 0;
     font-style: normal; }
   .packages .filled-heart,
   .packages .outlined-heart {
     fill: rosybrown; }
   .packages svg {
-    width: 10px; }
+    width: 10px;
+    margin-right: 5px; }
   .packages .custom {
-    padding: 10px 0;
+    padding: 30px 0;
     text-align: center;
     font-size: 18px; }
     .packages .custom a {
@@ -289,14 +406,7 @@ footer {
       height: 40px; }
     footer .icons svg {
       height: 35px;
-      fill: #111; }
+      fill: rosybrown; }
   footer a {
     text-decoration: none;
     color: #111; }
-
-body {
-  height: 100%;
-  background-color: #fff;
-  font-family: "Lato", cursive;
-  font-style: italic;
-  line-height: 1.4; }

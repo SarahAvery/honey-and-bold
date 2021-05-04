@@ -94,6 +94,35 @@
           $("button").attr("aria-expanded", "false");
         }
       });
-    }, 1000); //
+    }, 1000); // Image on click full size if screen is more than 500px
+
+    $(window).on("load resize", function () {
+      var width = $(window).width();
+
+      if (width >= 500) {
+        $(".gallery .container li").on("click", function (e) {
+          if ($(this).hasClass("full-screen")) {
+            $(this).removeClass("full-screen");
+          } else if (!$(this).hasClass("full-screen")) {
+            $(this).addClass("full-screen").siblings().removeClass("full-screen");
+          }
+        });
+      } else {
+        console.log("too small");
+      }
+    }); //   if ($(window).width() >= 500) {
+    //     $(".gallery .container li").on("click", function (e) {
+    //       if ($(this).hasClass("full-screen")) {
+    //         $(this).removeClass("full-screen");
+    //       } else if (!$(this).hasClass("full-screen")) {
+    //         $(this).addClass("full-screen").siblings().removeClass("full-screen");
+    //       }
+    //     });
+    //   } else {
+    //     console.log("too small");
+    //   }
+    // };
+    // $(window).load(onResize);
+    //
   });
 })(jQuery);
