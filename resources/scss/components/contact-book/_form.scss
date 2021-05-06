@@ -4,7 +4,7 @@
   margin: 0 auto;
   padding: 20px 2%;
 
-  h1 {
+  h2 {
     font-weight: normal;
     font-size: 30px;
     font-style: italic;
@@ -25,12 +25,12 @@
       font-weight: bold;
     }
 
-    label[for="name"],
-    label[for="contact"],
-    label[for="subject"],
-    label[for="schedule"],
-    label[for="hours"],
-    label[for="comment"] {
+    p.name,
+    p.contact,
+    p.schedule,
+    p.subject,
+    p.hours,
+    p.comment {
       width: 100%;
       padding: 5px 0;
     }
