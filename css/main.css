@@ -99,6 +99,9 @@ body.dark-theme {
   body.dark-theme .contact .form #sub-btn button {
     border: 3px solid rosybrown;
     background-color: rgba(255, 255, 255, 0.9); }
+  body.dark-theme .book-now .form span,
+  body.dark-theme .contact .form span {
+    color: #eee; }
   body.dark-theme footer {
     color: rgba(238, 238, 238, 0.9);
     background-color: #111; }
@@ -386,7 +389,7 @@ path {
   max-width: 1300px;
   margin: 0 auto;
   padding: 20px 2%; }
-  .gallery h1 {
+  .gallery h2 {
     font-weight: normal;
     font-size: 30px;
     font-style: italic; }
@@ -455,7 +458,7 @@ path {
   max-width: 1300px;
   margin: 0 auto;
   padding: 20px 2%; }
-  .packages h1 {
+  .packages h2 {
     font-weight: normal;
     font-size: 30px;
     font-style: italic; }
@@ -472,7 +475,7 @@ path {
     margin: 10px;
     padding: 10px;
     border-radius: 10px; }
-  .packages h2 {
+  .packages h3 {
     font-weight: normal;
     font-size: 22px;
     padding-bottom: 5px;
@@ -502,12 +505,12 @@ path {
   margin: 0 auto;
   padding: 20px 2%; }
 
-.about h1 {
+.about h2 {
   font-weight: normal;
   font-size: 30px;
   font-style: italic; }
 
-.about h2 {
+.about h3 {
   font-weight: normal; }
 
 .about .container {
@@ -556,8 +559,8 @@ path {
   max-width: 1300px;
   margin: 0 auto;
   padding: 20px 2%; }
-  .book-now h1,
-  .contact h1 {
+  .book-now h2,
+  .contact h2 {
     font-weight: normal;
     font-size: 30px;
     font-style: italic; }
@@ -580,18 +583,18 @@ path {
       flex-wrap: wrap;
       padding-bottom: 5px;
       font-weight: bold; }
-    .book-now .form label[for="name"],
-    .book-now .form label[for="contact"],
-    .book-now .form label[for="subject"],
-    .book-now .form label[for="schedule"],
-    .book-now .form label[for="hours"],
-    .book-now .form label[for="comment"],
-    .contact .form label[for="name"],
-    .contact .form label[for="contact"],
-    .contact .form label[for="subject"],
-    .contact .form label[for="schedule"],
-    .contact .form label[for="hours"],
-    .contact .form label[for="comment"] {
+    .book-now .form p.name,
+    .book-now .form p.contact,
+    .book-now .form p.schedule,
+    .book-now .form p.subject,
+    .book-now .form p.hours,
+    .book-now .form p.comment,
+    .contact .form p.name,
+    .contact .form p.contact,
+    .contact .form p.schedule,
+    .contact .form p.subject,
+    .contact .form p.hours,
+    .contact .form p.comment {
       width: 100%;
       padding: 5px 0; }
     .book-now .form .first,
