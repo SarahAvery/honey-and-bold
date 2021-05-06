@@ -40,7 +40,7 @@
         var isDark = $("body").hasClass("dark-theme");
         localStorage.setItem("theme", isDark ? "dark" : "");
       });
-    }, 100); // Image on click full size if screen is more than 500px
+    }, 300); // Image on click full size if screen is more than 500px
 
     $(window).on("load resize", function () {
       var width = $(window).width();
