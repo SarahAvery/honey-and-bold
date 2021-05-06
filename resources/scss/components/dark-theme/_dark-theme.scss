@@ -1,0 +1,144 @@
+body.dark-theme {
+  color: #eee;
+  //   background-color: #111;
+  background: rgb(40, 40, 40);
+
+  /* Header
+--------------------------------------------- */
+  .site-header {
+    .site-branding {
+      color: #eee;
+    }
+
+    a {
+      text-decoration: none;
+      color: #eee;
+    }
+  }
+
+  /* Navigation
+--------------------------------------------- */
+  .main-navigation {
+    height: auto;
+    color: rgba(238, 238, 238, 0.9);
+    background-color: #111;
+
+    li {
+      &:hover > a,
+      &.focus > a {
+        color: rgb(255, 255, 255);
+      }
+    }
+
+    a {
+      color: rgba(238, 238, 238, 0.9);
+    }
+  }
+  /* Small menu. */
+
+  .menu-toggle,
+  .main-navigation.toggled ul {
+    display: block;
+    border: none;
+    fill: rgba(238, 238, 238, 0.9);
+
+    &:hover {
+      fill: rgb(255, 255, 255);
+    }
+  }
+
+  @media screen and (min-width: 37.5em) {
+    .menu-toggle {
+      display: none;
+    }
+
+    .main-navigation ul {
+      display: flex;
+    }
+  }
+
+  /* Home-Page Intro 
+--------------------------------------------- */
+  .intro {
+    h2 {
+      border-bottom: 1px solid #eee;
+    }
+
+    h2 span {
+      background: rgb(40, 40, 40);
+    }
+  }
+
+  /* Home-Page Feature
+--------------------------------------------- */
+  .home-info {
+    .banner-container {
+      background: rgb(40, 40, 40);
+
+      .container {
+        .text-box {
+          background-color: rgb(40, 40, 40);
+        }
+
+        .para {
+          border-top: 1px solid #eee;
+        }
+      }
+    }
+  }
+
+  /* About
+--------------------------------------------- */
+
+  /* Portfolio
+--------------------------------------------- */
+  .gallery {
+    li.full-screen {
+      background: rgb(40, 40, 40);
+
+      img {
+        background: #eee;
+      }
+    }
+  }
+
+  /* Services
+--------------------------------------------- */
+  .packages {
+    a {
+      color: #eee;
+    }
+  }
+
+  /* Forms - Contact & Book Now
+--------------------------------------------- */
+  .book-now,
+  .contact {
+    .form {
+      input[type="text"],
+      textarea {
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 3px solid rgb(188, 143, 143);
+      }
+
+      #sub-btn {
+        button {
+          border: 3px solid rgb(188, 143, 143);
+          background: rgba(250, 236, 226, 1);
+        }
+      }
+    }
+  }
+
+  /* Footer
+--------------------------------------------- */
+  footer {
+    // background: rgb(40, 40, 40);
+    color: rgba(238, 238, 238, 0.9);
+    background-color: #111;
+
+    a {
+      color: rgba(238, 238, 238, 0.9);
+    }
+  }
+}

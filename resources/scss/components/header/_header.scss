@@ -1,4 +1,37 @@
 .site-header {
+  .theme {
+    font-size: 10px;
+    width: 5em;
+    height: 2em;
+    border: 0.1em solid #6d6d6d;
+    border-radius: 2em;
+    position: absolute;
+    z-index: 10;
+    margin-top: 10px;
+    margin-right: 10px;
+    right: 0;
+
+    .sun {
+      color: rgb(188, 143, 143);
+      width: 35%;
+      height: 100%;
+      border-radius: 1em;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      background-color: currentColor;
+      transition: left 0.5s ease, transform 0.5s linear;
+    }
+    .dark.sun {
+      border: white;
+      color: lightgray;
+      transition: 0.5s;
+      left: 65%;
+      animation: none;
+      background: lightgray;
+    }
+  }
+
   .site-branding {
     text-align: center;
     font-family: "Tangerine", cursive;
