@@ -65,6 +65,9 @@ body.dark-theme {
     body.dark-theme .menu-toggle:hover,
     body.dark-theme .main-navigation.toggled ul:hover {
       fill: white; }
+    body.dark-theme .menu-toggle path,
+    body.dark-theme .main-navigation.toggled ul path {
+      fill: rgba(238, 238, 238, 0.9); }
   @media screen and (min-width: 37.5em) {
     body.dark-theme .menu-toggle {
       display: none; }
@@ -95,7 +98,7 @@ body.dark-theme {
   body.dark-theme .book-now .form #sub-btn button,
   body.dark-theme .contact .form #sub-btn button {
     border: 3px solid rosybrown;
-    background: #faece2; }
+    background-color: rgba(255, 255, 255, 0.9); }
   body.dark-theme footer {
     color: rgba(238, 238, 238, 0.9);
     background-color: #111; }
@@ -206,6 +209,9 @@ body.dark-theme {
   padding: 5px;
   background-color: transparent; }
 
+path {
+  fill: rosybrown; }
+
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
@@ -302,7 +308,7 @@ body.dark-theme {
       display: flex; }
       .home-info .banner-container .container .text-box-one {
         max-width: 400px;
-        margin-top: -200px;
+        margin-top: -180px;
         padding: 5px 40px; }
       .home-info .banner-container .container .text-box-two {
         max-width: 340px;
@@ -332,6 +338,7 @@ body.dark-theme {
 @media only screen and (max-width: 950px) {
   .home-info .banner-container .container .text-box-one {
     max-width: 300px;
+    margin-top: -200px;
     padding: 5px 20px; }
   .home-info .banner-container .container .text-box-two {
     max-width: 300px;
