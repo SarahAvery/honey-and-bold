@@ -11,8 +11,128 @@ body {
   line-height: 1.4;
   color: #111; }
 
+.visually-hidden {
+  background-color: #fff;
+  color: #000;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px); }
+
+body.dark-theme {
+  color: #eee;
+  background: #282828;
+  /* Header
+--------------------------------------------- */
+  /* Navigation
+--------------------------------------------- */
+  /* Small menu. */
+  /* Home-Page Intro 
+--------------------------------------------- */
+  /* Home-Page Feature
+--------------------------------------------- */
+  /* About
+--------------------------------------------- */
+  /* Portfolio
+--------------------------------------------- */
+  /* Services
+--------------------------------------------- */
+  /* Forms - Contact & Book Now
+--------------------------------------------- */
+  /* Footer
+--------------------------------------------- */ }
+  body.dark-theme .site-header .site-branding {
+    color: #eee; }
+  body.dark-theme .site-header a {
+    text-decoration: none;
+    color: #eee; }
+  body.dark-theme .main-navigation {
+    height: auto;
+    color: rgba(238, 238, 238, 0.9);
+    background-color: #111; }
+    body.dark-theme .main-navigation li:hover > a,
+    body.dark-theme .main-navigation li.focus > a {
+      color: white; }
+    body.dark-theme .main-navigation a {
+      color: rgba(238, 238, 238, 0.9); }
+  body.dark-theme .menu-toggle,
+  body.dark-theme .main-navigation.toggled ul {
+    display: block;
+    border: none;
+    fill: rgba(238, 238, 238, 0.9); }
+    body.dark-theme .menu-toggle:hover,
+    body.dark-theme .main-navigation.toggled ul:hover {
+      fill: white; }
+  @media screen and (min-width: 37.5em) {
+    body.dark-theme .menu-toggle {
+      display: none; }
+    body.dark-theme .main-navigation ul {
+      display: flex; } }
+  body.dark-theme .intro h2 {
+    border-bottom: 1px solid #eee; }
+  body.dark-theme .intro h2 span {
+    background: #282828; }
+  body.dark-theme .home-info .banner-container {
+    background: #282828; }
+    body.dark-theme .home-info .banner-container .container .text-box {
+      background-color: #282828; }
+    body.dark-theme .home-info .banner-container .container .para {
+      border-top: 1px solid #eee; }
+  body.dark-theme .gallery li.full-screen {
+    background: #282828; }
+    body.dark-theme .gallery li.full-screen img {
+      background: #eee; }
+  body.dark-theme .packages a {
+    color: #eee; }
+  body.dark-theme .book-now .form input[type="text"],
+  body.dark-theme .book-now .form textarea,
+  body.dark-theme .contact .form input[type="text"],
+  body.dark-theme .contact .form textarea {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 3px solid rosybrown; }
+  body.dark-theme .book-now .form #sub-btn button,
+  body.dark-theme .contact .form #sub-btn button {
+    border: 3px solid rosybrown;
+    background: #faece2; }
+  body.dark-theme footer {
+    color: rgba(238, 238, 238, 0.9);
+    background-color: #111; }
+    body.dark-theme footer a {
+      color: rgba(238, 238, 238, 0.9); }
+
 /* Header
 --------------------------------------------- */
+.site-header .theme {
+  font-size: 10px;
+  width: 5em;
+  height: 2em;
+  border: 0.1em solid #6d6d6d;
+  border-radius: 2em;
+  position: absolute;
+  z-index: 10;
+  margin-top: 10px;
+  margin-right: 10px;
+  right: 0; }
+  .site-header .theme .sun {
+    color: rosybrown;
+    width: 35%;
+    height: 100%;
+    border-radius: 1em;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    background-color: currentColor;
+    transition: left 0.5s ease, transform 0.5s linear; }
+  .site-header .theme .dark.sun {
+    border: white;
+    color: lightgray;
+    transition: 0.5s;
+    left: 65%;
+    animation: none;
+    background: lightgray; }
+
 .site-header .site-branding {
   text-align: center;
   font-family: "Tangerine", cursive;
@@ -32,12 +152,15 @@ body {
 
 /* Navigation
 --------------------------------------------- */
+.main-navigation.light {
+  background: rgba(250, 236, 226, 0.5);
+  color: #111; }
+
 .main-navigation {
   display: block;
   width: 100%;
   text-align: center;
-  font-family: "lato";
-  background: rgba(250, 236, 226, 0.5); }
+  font-family: "lato"; }
   .main-navigation .menu-main-container {
     width: 100%; }
     .main-navigation .menu-main-container ul#primary-menu {
@@ -183,12 +306,13 @@ body {
         padding: 5px 40px; }
       .home-info .banner-container .container .text-box-two {
         max-width: 340px;
-        margin-top: -240px;
+        margin-top: -200px;
         padding: 5px 40px; }
       .home-info .banner-container .container .text-box {
         text-align: center;
         background-color: white;
-        height: auto; }
+        height: auto;
+        border-radius: 20px; }
       .home-info .banner-container .container p {
         margin: 5px; }
       .home-info .banner-container .container .title {
@@ -208,11 +332,9 @@ body {
 @media only screen and (max-width: 950px) {
   .home-info .banner-container .container .text-box-one {
     max-width: 300px;
-    margin-top: -200px;
     padding: 5px 20px; }
   .home-info .banner-container .container .text-box-two {
     max-width: 300px;
-    margin-top: -240px;
     padding: 5px 20px; } }
 
 @media only screen and (max-width: 800px) {
@@ -275,11 +397,13 @@ body {
   .gallery .image-box {
     width: 50%;
     max-height: 400px;
-    padding-bottom: 10px; }
+    padding-bottom: 10px;
+    background-color: none; }
     .gallery .image-box img {
       width: 100%;
       height: 100%;
-      cursor: pointer; }
+      cursor: pointer;
+      border-radius: 20px; }
   .gallery li.full-screen {
     background: #faece2;
     z-index: 10;
@@ -301,26 +425,11 @@ body {
       margin-top: 8px; }
 
 @media only screen and (max-width: 700px) {
-  .gallery li.full-screen {
-    background: #faece2;
-    z-index: 10;
+  .gallery li.full-screen img {
+    padding: 10px;
+    height: auto;
     width: 100%;
-    max-height: 9999px;
-    height: 100vh;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    .gallery li.full-screen img {
-      background: #fff;
-      padding: 10px;
-      height: auto;
-      width: 100%;
-      margin-top: 8px;
-      margin-left: 5px; } }
+    margin-left: 5px; } }
 
 @media only screen and (max-width: 400px) {
   .gallery .container {
@@ -333,7 +442,7 @@ body {
     width: 80%;
     height: 200px; } }
 
-/* Portfolio
+/* Services
 --------------------------------------------- */
 .packages {
   max-width: 1300px;
@@ -379,6 +488,183 @@ body {
       text-decoration: underline;
       color: #000; }
 
+/* About
+--------------------------------------------- */
+.about .sect-one {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px 2%; }
+
+.about h1 {
+  font-weight: normal;
+  font-size: 30px;
+  font-style: italic; }
+
+.about h2 {
+  font-weight: normal; }
+
+.about .container {
+  padding-top: 20px;
+  text-align: center; }
+
+.about .para {
+  padding: 20px 10%; }
+
+.about .background {
+  background: rgba(250, 236, 226, 0.5);
+  margin: 10px 0; }
+
+.about .images {
+  display: flex;
+  width: 100%; }
+
+.about .box {
+  width: 25%;
+  max-height: 420px; }
+
+.about img {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border-radius: 20px;
+  object-fit: cover; }
+
+.about .sect-two {
+  padding-bottom: 40px; }
+  .about .sect-two .container {
+    padding-top: 0; }
+  .about .sect-two .images {
+    padding: 20px 2%; }
+
+/* Contact/Book Now
+--------------------------------------------- */
+.book-now,
+.contact {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px 2%; }
+  .book-now h1,
+  .contact h1 {
+    font-weight: normal;
+    font-size: 30px;
+    font-style: italic; }
+  .book-now .form,
+  .contact .form {
+    padding-top: 20px; }
+    .book-now .form #name,
+    .book-now .form #contact,
+    .book-now .form #comment,
+    .book-now .form #subject,
+    .book-now .form #schedule,
+    .book-now .form #hours,
+    .contact .form #name,
+    .contact .form #contact,
+    .contact .form #comment,
+    .contact .form #subject,
+    .contact .form #schedule,
+    .contact .form #hours {
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 5px;
+      font-weight: bold; }
+    .book-now .form label[for="name"],
+    .book-now .form label[for="contact"],
+    .book-now .form label[for="subject"],
+    .book-now .form label[for="schedule"],
+    .book-now .form label[for="hours"],
+    .book-now .form label[for="comment"],
+    .contact .form label[for="name"],
+    .contact .form label[for="contact"],
+    .contact .form label[for="subject"],
+    .contact .form label[for="schedule"],
+    .contact .form label[for="hours"],
+    .contact .form label[for="comment"] {
+      width: 100%;
+      padding: 5px 0; }
+    .book-now .form .first,
+    .book-now .form .last,
+    .book-now .form .sched,
+    .book-now .form .hour-pref,
+    .book-now .form .subline,
+    .book-now .form .email,
+    .contact .form .first,
+    .contact .form .last,
+    .contact .form .sched,
+    .contact .form .hour-pref,
+    .contact .form .subline,
+    .contact .form .email {
+      display: flex;
+      flex-wrap: wrap;
+      width: 300px;
+      margin-right: 20px;
+      font-size: 14px;
+      font-weight: normal; }
+      .book-now .form .first input,
+      .book-now .form .last input,
+      .book-now .form .sched input,
+      .book-now .form .hour-pref input,
+      .book-now .form .subline input,
+      .book-now .form .email input,
+      .contact .form .first input,
+      .contact .form .last input,
+      .contact .form .sched input,
+      .contact .form .hour-pref input,
+      .contact .form .subline input,
+      .contact .form .email input {
+        width: 100%;
+        border-radius: 4px; }
+    .book-now .form .sched,
+    .book-now .form .hour-pref,
+    .book-now .form textarea,
+    .contact .form .sched,
+    .contact .form .hour-pref,
+    .contact .form textarea {
+      width: 600px; }
+    .book-now .form label,
+    .contact .form label {
+      padding: 5px 0; }
+    .book-now .form input[type="text"],
+    .book-now .form textarea,
+    .contact .form input[type="text"],
+    .contact .form textarea {
+      padding: 6px 10px;
+      border: 1.5px solid rosybrown; }
+    .book-now .form input,
+    .contact .form input {
+      outline: none;
+      font-style: 16px;
+      height: 30px;
+      line-height: 1.3; }
+    .book-now .form textarea,
+    .contact .form textarea {
+      outline: none;
+      font-size: 16px;
+      line-height: 1.3;
+      border-radius: 4px; }
+    .book-now .form #sub-btn button,
+    .contact .form #sub-btn button {
+      font-family: "Lato", cursive;
+      font-style: italic;
+      line-height: 1.4;
+      color: #111;
+      font-size: 16px;
+      padding: 5px;
+      border-radius: 4px;
+      outline: none;
+      border: 1.5px solid rosybrown;
+      background: rgba(250, 236, 226, 0.5); }
+    .book-now .form span,
+    .contact .form span {
+      color: red;
+      padding-left: 5px; }
+
+@media only screen and (max-width: 650px) {
+  .book-now .form .sched,
+  .book-now .form .hour-pref,
+  .book-now .form textarea {
+    width: auto;
+    min-width: 300px; } }
+
 /* Footer
 --------------------------------------------- */
 footer {
@@ -407,6 +693,8 @@ footer {
     footer .icons svg {
       height: 35px;
       fill: rosybrown; }
+  footer .contact {
+    padding: 10px 2%; }
   footer a {
     text-decoration: none;
     color: #111; }

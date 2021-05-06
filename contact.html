@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/css-reset.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <title>Honey and Bold</title>
+  </head>
+
+  <body>
+    <div id="header"></div>
+    <main>
+      <div class="contact">
+        <h1>Contact Me</h1>
+        <div class="form">
+          <form action="">
+            <div id="name">
+              <label for="name">Name <span title="required" aria-label="required">*</span></label>
+              <div class="first">
+                <input id="first-name" type="text" name="first-name" required />
+                <label for="first-name" aria-label="required" title="required"></label>
+              </div>
+            </div>
+            <!--  -->
+            <div id="contact">
+              <label for="contact" title="required" aria-label="required">Email<span>*</span></label>
+              <div class="email">
+                <input id="email-address" type="text" name="email-address" required />
+                <label for="email-address" aria-label="required" title="required"></label>
+              </div>
+            </div>
+            <!--  -->
+            <div id="subject">
+              <label for="subject">Subject</label>
+              <div class="subline">
+                <input type="text" id="sub-line" name="sub-line" /><label for="sub-line"></label>
+              </div>
+            </div>
+            <!--  -->
+            <div id="comment">
+              <label for="comment" title="required" aria-label="required">Comment or Message<span>*</span></label>
+              <div class="message">
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="10"
+                  aria-label="required"
+                  title="required"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <!--  -->
+            <div id="sub-btn">
+              <button type="submit">Send email</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer id="footer"></footer>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

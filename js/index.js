@@ -1,82 +1,3 @@
-/**
- *
- *
- * Handles toggling the navigation menu for small screens and enables TAB key
- * navigation support for dropdown menus.
- */
-// (function () {
-//   const siteNavigation = document.getElementById("site-navigation");
-//   const button = siteNavigation.getElementsByTagName("button")[0];
-//   // Return early if the button don't exist.
-//   if ("undefined" === typeof button) {
-//     return;
-//   }
-//   const menu = siteNavigation.getElementsByTagName("ul")[0];
-//   // Hide menu toggle button if menu is empty and return early.
-//   if ("undefined" === typeof menu) {
-//     button.style.display = "none";
-//     return;
-//   }
-//   if (!menu.classList.contains("nav-menu")) {
-//     menu.classList.add("nav-menu");
-//   }
-//   // Toggle the .toggled class and the aria-expanded value each time the button is clicked.
-//   button.addEventListener("click", function () {
-//     siteNavigation.classList.toggle("toggled");
-//     if (button.getAttribute("aria-expanded") === "true") {
-//       button.setAttribute("aria-expanded", "false");
-//     } else {
-//       button.setAttribute("aria-expanded", "true");
-//     }
-//   });
-//   // Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
-//   document.addEventListener("click", function (event) {
-//     const isClickInside = siteNavigation.contains(event.target);
-//     if (!isClickInside) {
-//       siteNavigation.classList.remove("toggled");
-//       button.setAttribute("aria-expanded", "false");
-//     }
-//   });
-//   // Get all the link elements within the menu.
-//   const links = menu.getElementsByTagName("a");
-//   // Get all the link elements with children within the menu.
-//   const linksWithChildren = menu.querySelectorAll(".menu-item-has-children > a, .page_item_has_children > a");
-//   // Toggle focus each time a menu link is focused or blurred.
-//   for (const link of links) {
-//     link.addEventListener("focus", toggleFocus, true);
-//     link.addEventListener("blur", toggleFocus, true);
-//   }
-//   // Toggle focus each time a menu link with children receive a touch event.
-//   for (const link of linksWithChildren) {
-//     link.addEventListener("touchstart", toggleFocus, false);
-//   }
-//   /**
-//    * Sets or removes .focus class on an element.
-//    */
-//   function toggleFocus() {
-//     if (event.type === "focus" || event.type === "blur") {
-//       let self = this;
-//       // Move up through the ancestors of the current link until we hit .nav-menu.
-//       while (!self.classList.contains("nav-menu")) {
-//         // On li elements toggle the class .focus.
-//         if ("li" === self.tagName.toLowerCase()) {
-//           self.classList.toggle("focus");
-//         }
-//         self = self.parentNode;
-//       }
-//     }
-//     if (event.type === "touchstart") {
-//       const menuItem = this.parentNode;
-//       event.preventDefault();
-//       for (const link of menuItem.parentNode.children) {
-//         if (menuItem !== link) {
-//           link.classList.remove("focus");
-//         }
-//       }
-//       menuItem.classList.toggle("focus");
-//     }
-//   }
-// })();
 (function ($) {
   $(document).ready(function () {
     // import header and footer into page
@@ -94,7 +15,32 @@
           $("button").attr("aria-expanded", "false");
         }
       });
-    }, 1000); // Image on click full size if screen is more than 500px
+      var themes = {
+        dark: {
+          classList: ["dark-theme", ""],
+          controlClassList: ["dark"]
+        },
+        "default": {
+          classList: [],
+          controlClassList: []
+        }
+      }; // Local Storage Toggle Theme
+
+      var initialTheme = localStorage.getItem("theme") || "default";
+      themes[initialTheme].classList.forEach(function (className) {
+        $("body").addClass(className);
+      });
+      themes[initialTheme].controlClassList.forEach(function (className) {
+        $(".theme .sun").addClass(className);
+      }); // Toggle Dark Theme
+
+      $("body .site-header .theme .sun").on("click", function () {
+        $("body").toggleClass("dark-theme");
+        $(".theme .sun").toggleClass("dark");
+        var isDark = $("body").hasClass("dark-theme");
+        localStorage.setItem("theme", isDark ? "dark" : "");
+      });
+    }, 100); // Image on click full size if screen is more than 500px
 
     $(window).on("load resize", function () {
       var width = $(window).width();
@@ -110,19 +56,6 @@
       } else {
         console.log("too small");
       }
-    }); //   if ($(window).width() >= 500) {
-    //     $(".gallery .container li").on("click", function (e) {
-    //       if ($(this).hasClass("full-screen")) {
-    //         $(this).removeClass("full-screen");
-    //       } else if (!$(this).hasClass("full-screen")) {
-    //         $(this).addClass("full-screen").siblings().removeClass("full-screen");
-    //       }
-    //     });
-    //   } else {
-    //     console.log("too small");
-    //   }
-    // };
-    // $(window).load(onResize);
-    //
+    });
   });
 })(jQuery);

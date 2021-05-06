@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/css-reset.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <title>Honey and Bold</title>
+  </head>
+
+  <body>
+    <div id="header"></div>
+    <main>
+      <div class="book-now">
+        <h1>Book now</h1>
+        <div class="form">
+          <form action="">
+            <!--  -->
+            <div id="name">
+              <label for="name">Name<span title="required" aria-label="required">*</span></label>
+              <div class="first">
+                <input id="first-name" type="text" name="first-name" required />
+                <label for="first-name" aria-label="required" title="required">First</label>
+              </div>
+              <div class="last">
+                <input id="last-name" type="text" name="last-name" required />
+                <label for="last-name" aria-label="required" title="required">Last</label>
+              </div>
+            </div>
+            <!--  -->
+            <div id="contact">
+              <label for="contact" title="required" aria-label="required">Email<span>*</span></label>
+              <div class="email">
+                <input id="email-address" type="text" name="email-address" required />
+                <label for="email-address" aria-label="required" title="required"></label>
+              </div>
+            </div>
+            <!--  -->
+            <div id="schedule">
+              <label for="schedule" title="required" aria-label="required"
+                >When would you like to schedule?<span>*</span></label
+              >
+              <div class="sched">
+                <input id="schedule-text" type="text" name="schedule-text" required />
+                <label for="schedule-text" aria-label="required" title="required"></label>
+              </div>
+            </div>
+            <!--  -->
+            <div id="hours">
+              <label for="hours" title="required" aria-label="required"
+                >How many hours would you like to schedule?<span>*</span></label
+              >
+              <div class="hour-pref">
+                <input id="hour" type="text" name="hour" required />
+                <label for="hour" aria-label="required" title="required"></label>
+              </div>
+            </div>
+            <!--  -->
+            <div id="comment">
+              <label for="comment" title="required" aria-label="required">Comment or Message<span>*</span></label>
+              <div class="message">
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="10"
+                  aria-label="required"
+                  title="required"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <!--  -->
+            <div id="sub-btn">
+              <button type="submit">Send email</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer id="footer"></footer>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
