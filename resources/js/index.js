@@ -46,7 +46,7 @@
         const isDark = $("body").hasClass("dark-theme");
         localStorage.setItem("theme", isDark ? "dark" : "");
       });
-    }, 100);
+    }, 500);
 
     // Image on click full size if screen is more than 500px
 
