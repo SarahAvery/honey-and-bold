@@ -45,6 +45,10 @@ body.dark-theme {
     &:hover {
       fill: rgb(255, 255, 255);
     }
+
+    path {
+      fill: rgba(238, 238, 238, 0.9);
+    }
   }
 
   @media screen and (min-width: 37.5em) {
@@ -124,7 +128,7 @@ body.dark-theme {
       #sub-btn {
         button {
           border: 3px solid rgb(188, 143, 143);
-          background: rgba(250, 236, 226, 1);
+          background-color: rgba(255, 255, 255, 0.9);
         }
       }
     }
