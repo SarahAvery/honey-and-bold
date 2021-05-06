@@ -543,6 +543,12 @@ path {
   .about .sect-two .images {
     padding: 20px 2%; }
 
+@media only screen and (max-width: 600px) {
+  .about .images {
+    flex-wrap: wrap; }
+  .about .box {
+    width: 50%; } }
+
 /* Contact/Book Now
 --------------------------------------------- */
 .book-now,
